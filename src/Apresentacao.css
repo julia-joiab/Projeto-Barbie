@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+.telaP{
+    background:pink;
+    justify-content:space-between;
+    text-align: center;
+    padding:23px;
+    font-size: 23px;
+    
+    width: 100%;  
+};
+
+.Apresentacao h1{
+    font-family: 'Tapestry', cursive;
+    color: palevioletred;
+};
+
+.button{
+    padding: 10px 30px;
+    border-radius: 7px;
+    border: none;
+    background: palevioletred;
+    color: black
+};
