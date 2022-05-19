@@ -1,16 +1,25 @@
 body{
 
     margin:0 ;
-  
     font:'Inconsolata', monospace;
-  
     font-size: 15px;
+    background-image:url("https://origamiami.com/wp-content/uploads/2021/08/papel-digital-barbie-8.jpg") ;
+    background-size: cover;
+    background-position:center ;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
   
+      
+      
+   
 }
   
   
 .container {
   
     text-align: center;
+    box-shadow: 25px;
 
 }

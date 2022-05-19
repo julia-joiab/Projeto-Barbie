@@ -10,9 +10,11 @@ const Final = ( props ) => {
 
         <div className="final">
 
-            <h1 className="h1"> Parabéns </h1>
+            <h1 className="h1"> Parabénsssss! </h1>
+            <p> Você participaria do filme... </p>
+            <img src="https://c.flikshost.com/70227049/backdrops/large/45r3Vhb30yumJFlGDAtxPMe8YND.jpg"></img>
             <p> Você terminou o Quiz! </p>
-            <button className="botao" onClick={ ()=> props.alteraTela(<Apresentacao alteraTela={alteraTela} />)} > Recomeçar </button>
+            <button className="botao" onClick={ ()=> props.alteraTela(<Apresentacao alteraTela={alteraTela} />)} > RECOMEÇAR </button>
 
         </div>
 

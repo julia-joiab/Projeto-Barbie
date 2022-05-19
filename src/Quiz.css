@@ -1,0 +1,41 @@
+img{
+
+    width:500px ;
+    border-radius: 15px;
+}
+.perguntas{
+
+    justify-content: center;
+    background:rgb(255, 115, 197);
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+    padding:23px;
+    font-size: 23px;
+    font-family: 'Lobster', cursive;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 10%;
+   
+}
+
+.perguntas li{
+
+    list-style: none;
+    background: rgb(253, 175, 213);
+    border: solid 2px rgb(34, 34, 34);
+    border-radius: 15px;
+    width: 89%;
+    padding: 10px;
+    display:flex;
+    justify-content:center;
+    margin:10px;
+
+}
+
+li:hover {
+    background-color: rgb(255, 115, 197);
+    color: #FFF;
+  }
+
+    

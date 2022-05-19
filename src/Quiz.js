@@ -1,7 +1,12 @@
 import Final from "./Final.js";
 import React, {useState} from 'react';
 
+
+
 const Quiz = ( props ) => {
+
+    require ("./Quiz.css")
+
 
     const alteraTela = props.alteraTela;
     const [ etapa, alteraEtapa ] = React.useState( 0 );
@@ -10,10 +15,13 @@ const Quiz = ( props ) => {
 
     const perguntas = [ 
 
+
+
+        
         {
             pergunta: "Onde você passaria suas férias?",
             respostas: ["Praia", "Ilha", "Biblioteca", "Estudio de Dança", "Shopping"],
-            imagem: "https://i.imgur.com/zTRteaF.jpeg",
+            imagem:  "https://i.imgur.com/zTRteaF.jpeg",
             correta: 0
         },
         {
@@ -62,16 +70,18 @@ const Quiz = ( props ) => {
 
     return ( 
 
-        <div>
+        <div className="perguntas">
 
-            <h2> { perguntas[ etapa ].pergunta } </h2>
             <img src={perguntas[ etapa ].imagem } />
-            <ul>
+            <h2> { perguntas[ etapa ].pergunta } </h2>
+            
+
+            <ul >
 
                 {
 
                     perguntas[ etapa ].respostas.map( (r,i) => {
-                        return <li onClick={ ()=> verificaResposta( i ) } > { r } </li>
+                        return <li  onClick={ ()=> verificaResposta( i ) } > { r } </li>
                     } )
 
                 }
