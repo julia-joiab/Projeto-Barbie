@@ -1,27 +1,25 @@
 import Final from "./Final.js";
 import React, {useState} from 'react';
 
-
-
 const Quiz = ( props ) => {
-
-    require ("./Quiz.css")
-
 
     const alteraTela = props.alteraTela;
     const [ etapa, alteraEtapa ] = React.useState( 0 );
 
     const [ pontos, alteraPontos ] = React.useState( 0 );
 
+    const numbers = [1, 2, 3, 4, 5];
+
+    const doubled = numbers.map((number) => number * 2);
+
     const perguntas = [ 
-
-
-
         
+
         {
+            
             pergunta: "Onde você passaria suas férias?",
             respostas: ["Praia", "Ilha", "Biblioteca", "Estudio de Dança", "Shopping"],
-            imagem:  "https://i.imgur.com/zTRteaF.jpeg",
+            imagem: "https://i.imgur.com/zTRteaF.jpeg",
             correta: 0
         },
         {
@@ -53,17 +51,17 @@ const Quiz = ( props ) => {
 
     const verificaResposta = ( i ) => {
 
-        const resposta_correta = perguntas[ etapa ].correta;
+        const resposta_digitada = perguntas[ etapa ].correta;
 
-        if( resposta_correta == i ){
-            alteraPontos( pontos + 5 )
-        }
+        
+        alteraPontos( pontos + (i * 10) )
+        
 
         if ( etapa + 1 < perguntas.length ){
             alteraEtapa(etapa + 1);
 
         }else{
-            alteraTela (<Final alteraTela={alteraTela} />);
+            alteraTela (<Final alteraTela={alteraTela} pontos={pontos} />);
         }
 
     }
@@ -72,16 +70,17 @@ const Quiz = ( props ) => {
 
         <div className="perguntas">
 
-            <img src={perguntas[ etapa ].imagem } />
-            <h2> { perguntas[ etapa ].pergunta } </h2>
+            <p>pontos: {pontos}</p>
             
+            <h2> { perguntas[ etapa ].pergunta } </h2>
+            <img width={100} src={perguntas[ etapa ].imagem } />
 
-            <ul >
+            <ul>
 
                 {
 
                     perguntas[ etapa ].respostas.map( (r,i) => {
-                        return <li  onClick={ ()=> verificaResposta( i ) } > { r } </li>
+                        return <li onClick={ ()=> verificaResposta( i ) } > { r } </li>
                     } )
 
                 }

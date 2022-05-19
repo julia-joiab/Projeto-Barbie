@@ -7,8 +7,9 @@ const Apresentacao = ( props ) => {
     const alteraTela = props.alteraTela;
 
     return ( 
-      
+
         <div className="telaP">
+
             <br/>
 
             <h1 > Boas vindas ao Quiz da Barbie! </h1>
@@ -17,11 +18,11 @@ const Apresentacao = ( props ) => {
 
             <p> Descubra de qual filme da Barbie você faria parte... </p>
 
-            <button  className="botao" onClick={ ()=> props.alteraTela( <Quiz alteraTela={alteraTela} /> ) } > INICIAR </button>
+            <button className="botao" onClick={ ()=> props.alteraTela( <Quiz alteraTela={alteraTela} /> ) } > INICIAR </button>
 
             <br/>
             <br/>
-            
+
         </div>
 
     );
