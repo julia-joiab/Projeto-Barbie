@@ -2,6 +2,7 @@ img{
 
     width:500px ;
     border-radius: 15px;
+
 }
 .perguntas{
 
@@ -16,7 +17,8 @@ img{
     width: 50%;
     border-radius: 15px;
     box-shadow: 10%;
-   
+    
+
 }
 
 .perguntas li{
@@ -36,6 +38,6 @@ img{
 li:hover {
     background-color: rgb(255, 115, 197);
     color: #FFF;
-  }
+}
 
     

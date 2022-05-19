@@ -3,14 +3,12 @@ import React, {useState} from 'react';
 
 const Quiz = ( props ) => {
 
+    require ("./Quiz.css")
+
     const alteraTela = props.alteraTela;
     const [ etapa, alteraEtapa ] = React.useState( 0 );
 
     const [ pontos, alteraPontos ] = React.useState( 0 );
-
-    const numbers = [1, 2, 3, 4, 5];
-
-    const doubled = numbers.map((number) => number * 2);
 
     const perguntas = [ 
         
@@ -69,18 +67,16 @@ const Quiz = ( props ) => {
     return ( 
 
         <div className="perguntas">
-
-            <p>pontos: {pontos}</p>
             
             <h2> { perguntas[ etapa ].pergunta } </h2>
-            <img width={100} src={perguntas[ etapa ].imagem } />
+            <img src={perguntas[ etapa ].imagem } />
 
             <ul>
 
                 {
 
                     perguntas[ etapa ].respostas.map( (r,i) => {
-                        return <li onClick={ ()=> verificaResposta( i ) } > { r } </li>
+                        return <li key={i} onClick={ ()=> verificaResposta( i ) } > { r } </li>
                     } )
 
                 }

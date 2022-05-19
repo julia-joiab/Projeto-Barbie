@@ -2,10 +2,19 @@ import Quiz from "./Quiz.js";
 
 const Apresentacao = ( props ) => {
 
+    require ("./Final.css")
     require ("./Apresentacao.css")
 
     const alteraTela = props.alteraTela;
 
+    const estilo = {
+        padding: "15px 35px",
+        borderRadius: "15px",
+        border: "none",
+        background: "rgb(253, 175, 213)",
+        color: "black"
+    }
+    
     return ( 
 
         <div className="telaP">
@@ -18,7 +27,7 @@ const Apresentacao = ( props ) => {
 
             <p> Descubra de qual filme da Barbie você faria parte... </p>
 
-            <button className="botao" onClick={ ()=> props.alteraTela( <Quiz alteraTela={alteraTela} /> ) } > INICIAR </button>
+            <button style={estilo} onClick={ ()=> props.alteraTela( <Quiz alteraTela={alteraTela} /> ) } > INICIAR </button>
 
             <br/>
             <br/>

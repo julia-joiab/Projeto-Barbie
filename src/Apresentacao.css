@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Lobster&family=Tapestry&display=swap');
 
 .telaP{
+
     background:rgb(255, 115, 197);
     justify-content:space-between;
     text-align: center;
@@ -13,18 +14,22 @@
     border-radius: 15px; 
     height: 25% ;
     margin-top: 55px;
+
 };
 
 .h1{
+
     font-family: 'Tapestry', cursive;
     color: palevioletred;
+
 };
 
-.botao{
+.telaP div{
     
     padding: 15px 35px;
     border-radius: 15px;
     border: none;
     background: palevioletred;
     color: black
+
 };
